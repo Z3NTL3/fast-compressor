@@ -30,6 +30,9 @@ module.exports = async function (app,opts,done){
     app.get('/graphql*',{
         schema: { querystring: app.getSchema('/query-validator') },
         attachValidation: true,
+        compress: {
+            treshold: 50
+        }
     } ,async (req,res) => {
         if (req.validationError) {
             res.code(403).compress({err:"Missing querystring 'query'", info: "Querystring 'query' should be a GraphQl query."})
@@ -44,18 +47,18 @@ module.exports = async function (app,opts,done){
             req.headers['accept-encoding'], 
             JSON.stringify(performTask, null, 4)
         )
-
+   
         if(encoding !== null){
             res.header('Content-Encoding', encoding)
         }
 
-        if(success){
+        if(success !== null){
             return res.send(
                 data
             )
         }
         return res.send(
-            {err: JSON.stringify(err)} // this would never happen tho, only give a accept encoding header info and a stringified json object as 2 args to the function so this scenerio wont ever happen
+            {hey: "nothing is compressed..."} 
         )
         
 
