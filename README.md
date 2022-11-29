@@ -11,6 +11,8 @@ Implemented compression algorithms at the moment: Brotli and Gzip. With preferen
 ###### Example:
 ``fastify.fastRESTcomp(req.headers['accept-encoding'], JSON.stringify({hello: "world"}, null, 4))``
 
+### Installation
+``npm i fast-compressor``
 ```js
 // Example
 ...asuming you have Fastify.js server ready and some basic knowledge
@@ -18,7 +20,7 @@ Implemented compression algorithms at the moment: Brotli and Gzip. With preferen
 // To register the plugin
 // Keep in mind to register this plugin on your main (root) Fastify Instance (main Fastify app).
 // For more info see https://www.fastify.io/docs/latest/Reference/Encapsulation/
-app.register(require(path.join(__dirname,'plugin.js')))
+app.register(require('fast-compressor'))
 
 // A example usage on a structured route
 module.exports = async function (app,opts,done){
