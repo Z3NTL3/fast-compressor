@@ -30,7 +30,7 @@ function compresser(fastify,_options,done){
         } else if(gzipEncoding.test(header)){
            data = await gzip(data)
         } else {
-            return { encoding: null, data: data}
+            return { encoding: null, data: data, success: null}
         }
 
         let success = true
