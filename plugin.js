@@ -45,8 +45,5 @@ function compresser(fastify,_options,done){
 
 module.exports = fp(compresser, {
   fastify: '^4.x',
-  name: 'fast-easy-compressor',
-  decorators: {
-    fastify: ['fastRESTcomp'],
-  }
+  name: 'fast-easy-compressor'
 })
