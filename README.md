@@ -27,9 +27,6 @@ module.exports = async function (app,opts,done){
     app.get('/graphql*',{
         schema: { querystring: app.getSchema('/query-validator') },
         attachValidation: true,
-        compress: {
-            treshold: 50
-        }
     } ,async (req,res) => {
         if (req.validationError) {
             res.code(403).compress({err:"Missing querystring 'query'", info: "Querystring 'query' should be a GraphQl query."})
