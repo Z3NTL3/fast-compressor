@@ -5,9 +5,6 @@
 A quick and easy solution for REST APIs that serve primarily JSON type. Call the plugin easy simplicity and have compression within your API. 
 
 Implemented compression algorithms at the moment: Brotli and Gzip. With preference being Brotli and then Gzip.
-###### Some screen
-![alt text](https://media.discordapp.net/attachments/1047230469109973002/1047230485920763924/image.png)
-
 
 ### API
 ``fastify.fastRESTcomp(clientEncoding_Header: req.headers['accept-encoding'] , JSON_Stringified_OBJ: String)``
