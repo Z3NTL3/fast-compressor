@@ -1,0 +1,30 @@
+{
+  "name": "fast-compressor",
+  "version": "1.1.0",
+  "description": "Fast Easy Compressing Plugin for REST API",
+  "main": "plugin.js",
+  "scripts": {
+    "test": "node plugin.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Z3NTL3/fast-compressor.git"
+  },
+  "keywords": [
+    "fastify",
+    "compressor",
+    "rest",
+    "api",
+    "json",
+    "raw",
+    "algorithm",
+    "brotli",
+    "gzip"
+  ],
+  "author": "Z3NTL3",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/Z3NTL3/fast-compressor/issues"
+  },
+  "homepage": "https://github.com/Z3NTL3/fast-compressor#readme"
+}
